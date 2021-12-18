@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="(https://fonts.google.com/specimen/Outfit">
+    <style>
+        main {
+            font-family: 'Outfit', sans-serif;
+            background-color: hsl(217, 54%, 11%);
+            height: 100%;
+            align-items: center;
+            justify-self: center;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container{
+            width: 200px;
+            height: max-content;
+            position: relative;
+            top: 15%;
+            margin: auto;
+            border-radius: 20px;
+            display: grid;
+        } 
+
+        section {
+            background-color: hsl(216, 50%, 16%);
+            display: grid;
+            padding: 15px;
+        }
+
+        #front-image {
+            height: 200px;
+            width: 200px;
+            justify-self: center;
+            display: block;
+        }
+
+        /* For mobile phones: */
+
+        @media only screen and (max-width: 320px) {
+            .container {
+                width: 80%;
+                height: max-content;
+                position: relative;
+                margin: auto;
+                border-radius: 20px;
+                display: grid;
+            }
+            main {
+               height: 100%;
+               width: 100%; 
+            }
+        }
+
+
+        /* front Image overlay/hover */
+        .img-container {
+            position: relative;
+            width: 100%;
+            max-width: 200px;
+            justify-self: center;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: hsl(178, 100%, 50%);
+        }
+
+        .img-container:hover .overlay {
+        opacity: 0.2;
+        }
+
+        .icon {
+        color: white;
+        font-size: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        }
+        
+       /* heading */
+
+        h2 {
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        h2:hover {
+            color: hsl(178, 100%, 50%);
+        }
+        
+        .foot img {
+            height: 20px;
+        }
+
+        p {
+            font-size: 12px;
+            color: hsl(215, 51%, 70%);
+        }
+
+        /* Etherium icon and date */
+
+        .flow {
+            display: flex;
+            font-size: 12px;
+            gap: 60%;
+            text-align: center;
+            
+        }
+        
+        .price {
+            color: hsl(178, 100%, 50%);
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 9px;
+            position: absolute; 
+            margin-top: 4px;
+            margin-left: 5px;
+        }
+
+        .date {
+            color: hsl(215, 51%, 70%);
+            float: inline-end;
+        }
+
+        hr {
+            margin: 15px 0;
+            background-color: white;
+            width: 100%;
+        }
+
+        /* Foot (image and span) */
+
+        footer {
+            display: flex;
+            font-size: 12px;
+            gap: 5%;
+            align-items: center;
+            border-color: white;
+        }
+
+        .foot img {
+            border: white 1px solid;
+            border-radius: 50%;
+            align-items: right;
+        }
+
+        .foot a {
+            color: white;
+        }
+
+        .foot a:hover {
+            color: hsl(178, 100%, 50%);
+        }
+
+    </style>
+    </head>
+    <main>
+        <section class="container">
+                <div class="img-container">
+                    <a href="#"><img id="front-image" class="image" src="images/image-equilibrium.jpg" alt="equilibrium display"></a>
+                    <div class="overlay">
+                        <img class="icon" src="images/favicon-32x32.png" alt="icon">
+                    </div>
+                </div>
+                <h2> <a href="#">Equilibrium #3429</a></h2>
+                <p>Our Equilibrium collection promotes balance and calm.</p>
+            
+            <div class="flow">
+                <div class="price">
+                     <img src="images/icon-ethereum.svg" alt="etherium icon">
+                    <span>0.041 ETH</span>
+                </div>
+                <div class="date">
+                    <img src="images/icon-clock.svg" alt="clock icon">
+                    <span>3 days left</span>
+                </div>    
+            </div>
+
+            <hr>
+
+    <footer class="foot">
+        <img  src="images/image-avatar.png" alt="image-avatar">
+            <p>Creationn of <a href="#">Jules Wyvern </a></p>
+    </footer>
+        </section>
+    </main>
+</html>
